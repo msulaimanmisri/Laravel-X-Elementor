@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Page\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -9,9 +10,9 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
  */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::name('page.')->group(fn() =>
+    Route::get('/', [PageController::class, 'index'])->name('index')
+);
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard.index');
 
