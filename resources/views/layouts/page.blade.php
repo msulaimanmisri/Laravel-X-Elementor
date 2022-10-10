@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 </head>
 
-<body>
+<body class="bg-light">
     @include('layouts.public-navbar')
     @yield('content')
     @include('layouts.script')
