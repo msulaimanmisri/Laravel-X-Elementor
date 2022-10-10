@@ -14,7 +14,7 @@
 <body class="bg-light">
     @include('layouts.public-navbar')
     @yield('content')
-    @include('layouts.script')
+    @include('layouts.public-script')
     @stack('child-scripts')
 </body>
 
